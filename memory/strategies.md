@@ -4,6 +4,8 @@
 - Short-dated "will X happen by date" markets with near-expiry offer edges when events are clearly unlikely in the remaining time (e.g., criminal conviction in 21 days)
 - Cross-referencing news with market prices reveals when markets lag behind developments
 - Corporate milestones (IPO filings) create strong base rates for longer-dated resolution
+- **Calendar arbitrage**: When a catalyst event happens AFTER a market's resolution date, the market overprices the risk (e.g., May 7 elections after Apr 30 Starmer deadline)
+- Term structure analysis — comparing prices across time horizons reveals where market overestimates near-term probability
 
 ## What Doesn't Work
 <!-- Update this as we learn -->
