@@ -231,12 +231,49 @@ None yet — evaluating targets
 - ProjectDiscovery — consistent $100-250 Go bounties via Algora
 
 ## Submitted PRs
-1. **FinMind GDPR PII Export & Delete ($500)** — https://github.com/rohitdash08/FinMind/pull/357
+<!-- Currently open PRs awaiting review -->
+
+## Submitted PRs
+1. **tscircuit/circuitjson.com — Update Dependencies ($50)** — https://github.com/tscircuit/circuitjson.com/pull/111
    - Submitted: March 10, 2026
-   - Status: OPEN, awaiting review
+   - Status: OPEN — awaiting review
+   - Issue: #79 — Update dependencies (runframe, circuit-json etc.) to latest version
+   - Added `/claim #79` to PR body
+   - Updated 11 tscircuit packages to latest, removed bun.lock, added @tscircuit/plop
+   - Payment: Via Algora ($50 bounty) — tscircuit is a PROVEN payer
+
+2. **Crowdify Multiple Admin Support ($50)** — https://github.com/Fahad-Dezloper/Crowdify/pull/44
+   - Submitted: March 10, 2026
+   - Status: OPEN — awaiting review from @Fahad-Dezloper
+   - NOTE: Maintainer said "Not maintaining this project anymore" (Aug 2025) — may not review
+   - Added `/claim #27` to PR body
+   - 9 files changed, 618 insertions, full TypeScript implementation
+   - Payment: Via GitEarn ($50 bounty)
+
+2. **FinMind GDPR PII Export & Delete ($500)** — https://github.com/rohitdash08/FinMind/pull/357
+   - Submitted: March 10, 2026
+   - Status: OPEN — awaiting review from @rohitdash08
+   - Added `/claim #76` to PR body ✅
    - 3 endpoints, 18 tests, 449 lines added
+   - Payment: Via Algora, wallet transfer only, 2-5 days after reward
+   - ACTION: Need to sign up on algora.io/onboarding/dev for payout eligibility
 
 ## Completed
-<!-- Bounties claimed and paid -->
 
-## Total Earnings: $0
+## NEW TARGETS (March 10 update)
+1. **Expensify/App** — $250 per bug fix, React Native/TypeScript
+   - Dozens of open $250 bounties refreshed daily
+   - Well-established external contributor program
+   - Examples: #84757, #84755, #84754, #84746, #84737
+   - BEST PIPELINE for consistent income
+
+2. **FinMind #121 — Weekly Financial Summary Digest ($500)**
+   - We already know the codebase, have merged PR
+   - Python backend, email/digest generation
+   - 38 comments = high competition but we have track record
+
+3. **tscircuit/jlcsearch #92 — Add is_extended_promotional column ($75)**
+   - Small, well-scoped task
+   - Quick $75 if codebase is approachable
+
+## Total Earnings: $600 (pending payout)

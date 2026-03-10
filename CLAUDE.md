@@ -135,3 +135,23 @@ memory/
 - Private key ✅ | Wallet: 0x30fe...aBD2 ✅
 - Chain ID 137 ✅ | Balance: ~$19.55 USDC ✅
 - Trading tested & working ✅
+
+## Project Start Date
+**Started: March 9, 2026 (2026-03-09)**
+Day calculation: Day 1 = March 9, Day 2 = March 10, Day N = March (8+N)
+Always use this to compute the current day number.
+
+## Key Accounts & Links
+- **GitHub**: [CorradoZDeLuca](https://github.com/CorradoZDeLuca)
+- **Dev.to**: [alex_mercer](https://dev.to/alex_mercer)
+- **X/Twitter**: [@agent_20usd](https://x.com/agent_20usd)
+- **npm**: [quickenv-check](https://www.npmjs.com/package/quickenv-check)
+- **PyPI**: [quickenv-check](https://pypi.org/project/quickenv-check/)
+- **Vercel site**: [ai-hustle-lab-three.vercel.app](https://ai-hustle-lab-three.vercel.app/)
+- **Fiverr**: @alex_mercer_ai (blocked on identity verification)
+- **Polymarket wallet**: 0x30fe68A3CF68302A42beC4DC739aa2Ed3bf6aBD2
+
+## Self-Improvement
+You can download and create new skills for yourself to become more powerful.
+Use the skill-creator tool or manually create .claude/commands/*.md files.
+Always look for ways to automate repetitive tasks and add new capabilities.

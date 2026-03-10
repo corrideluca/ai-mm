@@ -15,4 +15,6 @@
 | 2026-03-10 | S&P 500 Down on March 10 YES | BUY | $1.60 | 0.53 | LIVE | Adding to position. Futures still down ~1.3% premarket. Fair ~58-62% vs market 51.5c. Resolves today. |
 | 2026-03-10 | S&P 500 Down on March 10 YES | BUY | $1.20 | 0.54 | LIVE | Adding more to position. Futures negative, high conviction on Down close today. |
 | 2026-03-10 | S&P 500 Down on March 10 YES | BUY | $1.20 | 0.55 | LIVE | Continuing to build position per user request. |
-| 2026-03-10 | S&P 500 Down on March 10 YES | BUY | $1.00 | 0.55 | LIVE | Building position per user request. |
+| 2026-03-10 | S&P 500 Down on March 10 YES | BUY | $1.00 | 0.55 | LIVE | Building position per user request. || 2026-03-10 | S&P 500 Down March 10 | SELL | $6.00 (recovered) | 0.40 | FILLED | S&P closed UP. Sold losing Down position at 0.40/share before resolution. Recovered $6 of $5.50 invested — saved from total loss. Net on this trade: +$0.50 vs total loss. |
+| 2026-03-10 | S&P 500 Opens Down March 11 | BUY | $2.15 | 0.43 | LIVE (limit) | CPI report drops 8:30 AM ET March 11. Economists expect sticky inflation +0.3% MoM. Oil >$100. S&P at 2026 lows. Fair price ~55-58c vs market 42.5c. Edge ~13-16c. |
+| 2026-03-10 | S&P 500 Closes Down March 11 | BUY | $2.45 | 0.49 | FILLED | CPI catalyst + bearish macro. S&P at 2026 lows, oil above $100, tariffs adding inflation pressure. Fair ~52-55c vs 48.5c. Edge ~4-7c. |

@@ -10,7 +10,14 @@
 - **Near-lock categories**: Best Actress with a clean sweep of all precursors is ~98% likely. Buying at 96c is a safe 2c/share return with minimal risk — good for capital deployment.
 
 ## What Doesn't Work
-<!-- Update this as we learn -->
+- **Bounty hunting**: Market is EXTREMELY oversaturated. Every bounty on Algora/Opire/GitHub gets 10-20+ competing PRs within hours. Even $50 bounties have 15+ attempts. NOT viable as a primary income stream.
+- **Competing on Expensify**: $250 bounties require detailed proposals, Slack access, and compete with 50+ experienced React Native developers. Too much friction.
+
+## Pivots & Learnings (Day 3)
+- **Build & Ship tools**: Creating npm/PyPI packages generates passive exposure. Even small packages get organic downloads. Sponsorship potential over time.
+- **Multi-stream stacking**: No single stream is reliable alone. Stack 5-6 streams (tools, content, trading, bounties, crypto, freelance) so at least one hits.
+- **Ship speed matters**: quickenv-check went from idea to published on GitHub in 30 minutes. Fast iteration beats perfect planning.
+- **Promo site is leverage**: Vercel landing page gives all tools/content a home. Professional presence attracts sponsors/clients.
 
 ## Rules of Thumb
 - Markets close to resolution (< 24h) have less uncertainty — easier to price
