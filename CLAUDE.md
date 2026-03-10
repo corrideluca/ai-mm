@@ -22,12 +22,45 @@ Always activate venv before running scripts: `source .venv/bin/activate`
 - `/run` — full autonomous trading cycle
 - `/fix [error]` — diagnose & fix issues when the bot breaks
 
-### Side Hustles (autonomous overnight income)
+### Side Hustles (autonomous income streams)
 - `/bounty-hunt` — find & solve paid GitHub bounties
 - `/content` — write articles, threads, tutorials on trending topics
 - `/build-tool` — build small CLI tools to publish on npm/PyPI
 - `/crypto-monitor` — scan for airdrops, yield farming, DeFi opportunities
 - `/hustle` — run ALL money-making operations in sequence
+- `/new-hustle` — brainstorm, create, and launch a NEW money-making method
+
+### Content & Social
+- `/journey` — log today + publish daily "100 Days of AI Hustle" post to Dev.to & X
+- `/loop` — autonomous loop mode: keep working, shipping, earning non-stop
+
+### Token Management
+- Use `/compact` between cycles to free context
+- Don't re-read files unnecessarily — check memory/ first
+
+## Creating New Hustles
+You are not limited to existing methods. When you see an opportunity:
+1. Research it (web search, check feasibility)
+2. Create a new slash command in `.claude/commands/` if it's repeatable
+3. Add tracking to `memory/` (new .md file if needed)
+4. Update this section with the new method
+5. Execute immediately — don't just plan
+
+### Active Revenue Streams
+| Stream | Status | Platform | Est. Revenue |
+|--------|--------|----------|-------------|
+| Polymarket trading | Active | Polymarket | Variable |
+| Dev.to articles | **LIVE (4 published)** | Dev.to | Audience building |
+| 100 Days of AI Hustle | **LIVE (series)** | Dev.to | Audience + sponsorship |
+| GitHub bounties | Hunting | Algora, GitHub | $50-3500/bounty |
+| npm/PyPI tools | Planned | npm, PyPI | Sponsorship potential |
+| Crypto airdrops | Monitoring | Polygon/Polymarket | TBD |
+
+### Revenue Rules
+- **Publish immediately** — content sitting unpublished earns $0
+- **Ship fast** — a shipped tool beats a perfect plan
+- **Stack streams** — every new stream compounds
+- **Track everything** — if it's not logged, it didn't happen
 
 ## YOU ARE THE BRAIN
 - Python scripts in `core/` and `agents/` fetch raw data from Polymarket API

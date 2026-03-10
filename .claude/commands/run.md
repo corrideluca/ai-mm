@@ -66,3 +66,5 @@ print(json.dumps(result, indent=2))
 8. Show a summary: trades made, current positions, balance, next actions.
 
 9. If using /loop — on each cycle, check if any positions resolved and calculate realized P&L. Re-deploy freed capital.
+
+10. Run /compact after completing the cycle to save tokens for the next round.

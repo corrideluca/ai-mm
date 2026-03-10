@@ -1,35 +1,49 @@
-Run ALL money-making operations in sequence. This is the full overnight hustle cycle.
+Run ALL money-making operations in sequence. This is the full hustle cycle.
 
-## The Overnight Hustle Cycle
+## PRIORITY ORDER: Highest ROI first
 
-### Phase 1: Trading (Primary income)
-Run /scan and /run to execute Polymarket trades. This is the most proven income stream.
+### Phase 1: Publish content (instant, $0 cost)
+Check memory/content.md for unpublished content. Publish everything to Dev.to using the API key.
+Write 1-2 NEW articles on trending topics and publish immediately.
+Content sitting unpublished = $0. Ship it.
 
-### Phase 2: Bounty Hunting
+### Phase 2: Bounty Hunting (highest $/hr potential)
 Run /bounty-hunt to find and solve paid GitHub bounties. Target quick wins ($50-200).
+Prioritize bounties you can solve in <1 hour.
 
-### Phase 3: Content Creation
-Run /content to create publishable content on trending topics. Build audience for long-term income.
+### Phase 3: Trading (if Polymarket is active)
+Run /scan and /run to execute Polymarket trades.
+Skip if user says no Polymarket today.
 
-### Phase 4: Crypto Monitoring
-Run /crypto-monitor to check for airdrop and yield opportunities on existing wallet.
+### Phase 4: Build & Ship a tool
+Run /build-tool to build a small utility. Publish to npm or PyPI same session.
+Even a simple tool with a good README can attract GitHub sponsors.
 
-### Phase 5: Tool Building (if time allows)
-Run /build-tool to build a small utility tool. This is the slowest to monetize but has compounding returns.
+### Phase 5: Crypto Monitoring
+Run /crypto-monitor to check for airdrop and yield opportunities.
 
-### Phase 6: Review & Learn
+### Phase 6: Innovate — find NEW revenue streams
+Run /new-hustle to brainstorm and launch something new.
+The system should grow every cycle, not just repeat.
+
+### Phase 7: Review & Learn
 After all phases:
-1. Check memory/performance.md for trade results
-2. Check memory/bounties.md for bounty status
-3. Check memory/content.md for content pipeline
-4. Check memory/crypto.md for crypto opportunities
-5. Update memory/strategies.md with cross-domain learnings
+1. Check all memory/*.md files for status
+2. Update memory/strategies.md with cross-domain learnings
+3. Calculate total actual + expected revenue
+
+### Phase 8: Token Management
+After completing work, use /compact to clear conversation context.
+Don't burn tokens re-reading files you already know — check memory/ first.
+Keep responses concise. Ship fast, log results, compress, repeat.
 
 ### Summary
 Print a summary of:
-- Trades placed and expected returns
-- Bounties attempted
-- Content created
-- Crypto actions taken
-- Tools built
-- Total estimated overnight income potential
+- Content published (with links)
+- Bounties attempted/submitted
+- Tools shipped
+- Trades placed
+- New hustles launched
+- **Total actual revenue + estimated pipeline**
+
+Then run /compact to free up context for the next cycle.

@@ -1,0 +1,44 @@
+{
+  "name": "ai-risk-calc",
+  "version": "1.0.0",
+  "description": "CLI position sizing calculator for traders. Calculates optimal bet size using risk percentage, Kelly Criterion, and R:R analysis. Works for crypto, stocks, prediction markets, and sports betting.",
+  "main": "index.js",
+  "bin": {
+    "ai-risk-calc": "./index.js"
+  },
+  "scripts": {
+    "test": "node index.js --balance 1000 --risk 2 --entry 50 --stop 45"
+  },
+  "keywords": [
+    "trading",
+    "position-sizing",
+    "risk-management",
+    "kelly-criterion",
+    "crypto",
+    "stocks",
+    "prediction-markets",
+    "polymarket",
+    "cli",
+    "calculator",
+    "finance",
+    "betting",
+    "portfolio",
+    "money-management",
+    "risk-reward"
+  ],
+  "author": "ai-mm",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ai-mm/ai-risk-calc"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ]
+}
