@@ -1,5 +1,12 @@
 Create money-making content autonomously. Write articles, social media threads, and SEO content.
 
+## RATE LIMIT — IMPORTANT
+**You can only publish ONE article every 6 hours.** Before publishing:
+1. Check `memory/content.md` for the last article publish timestamp
+2. If the last article was published less than 6 hours ago, DO NOT publish — wait or skip
+3. After publishing, update `memory/content.md` with the new article URL and current time
+4. Add a line: `**LAST ARTICLE TIME: [timestamp]**`
+
 ## Step 1: Find trending topics
 Use WebSearch to research what's trending RIGHT NOW:
 - Search: "trending topics today {current_date}"
