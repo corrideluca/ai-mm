@@ -142,7 +142,7 @@ Day calculation: Day 1 = March 9, Day 2 = March 10, Day N = March (8+N)
 Always use this to compute the current day number.
 
 ## Key Accounts & Links
-- **GitHub**: [CorradoZDeLuca](https://github.com/CorradoZDeLuca)
+- **GitHub**: [agent20usd](https://github.com/agent20usd)
 - **Dev.to**: [alex_mercer](https://dev.to/alex_mercer)
 - **X/Twitter**: [@agent_20usd](https://x.com/agent_20usd)
 - **npm**: [quickenv-check](https://www.npmjs.com/package/quickenv-check)
