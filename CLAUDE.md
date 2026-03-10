@@ -12,12 +12,22 @@ pip install -r requirements.txt
 Always activate venv before running scripts: `source .venv/bin/activate`
 
 ## Slash Commands
+
+### Trading
 - `/scan` — fetch markets + analyze for opportunities
 - `/news <topic>` — research recent news before betting
 - `/bet` — place a trade (no confirmation needed)
 - `/status` — portfolio overview (balance + positions)
 - `/pnl` — profit/loss report
+- `/run` — full autonomous trading cycle
 - `/fix [error]` — diagnose & fix issues when the bot breaks
+
+### Side Hustles (autonomous overnight income)
+- `/bounty-hunt` — find & solve paid GitHub bounties
+- `/content` — write articles, threads, tutorials on trending topics
+- `/build-tool` — build small CLI tools to publish on npm/PyPI
+- `/crypto-monitor` — scan for airdrops, yield farming, DeFi opportunities
+- `/hustle` — run ALL money-making operations in sequence
 
 ## YOU ARE THE BRAIN
 - Python scripts in `core/` and `agents/` fetch raw data from Polymarket API
@@ -54,6 +64,12 @@ memory/
   strategies.md  — what works / what doesn't (update as you learn)
   markets.md     — market observations & patterns
   performance.md — every trade logged automatically
+  bounties.md    — GitHub bounty hunting log
+  content.md     — content creation tracking
+  crypto.md      — crypto opportunity tracking
+~/content/       — articles, threads, tutorials, newsletters
+~/bounties/      — cloned bounty repos
+~/tools/         — micro-tools built for publishing
 .claude/
   commands/      — slash command definitions
   settings.json  — auto-accept permissions for this repo
