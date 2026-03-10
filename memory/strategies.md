@@ -25,8 +25,11 @@
 - **Risk system blocks sells**: The risk check is designed for buys only. For sells, bypass via `place_limit_order(token_id, price, size, side='SELL')` directly.
 - **Minimum order is 5 shares**: At high prices (90c+), this means $4.50+ minimum. Plan sizing accordingly.
 
-## X/Twitter Growth Strategy (Day 2 Evening)
-- **New accounts can't reply/quote tweet** — Twitter blocks engagement with accounts that haven't interacted with you. Focus on standalone tweets with hashtags.
+## X/Twitter Growth Strategy (Day 2 Evening, updated Day 3)
+- **Graduated access**: New accounts CAN reply, but Twitter shows a "graduated access" modal first. Replies DO go through — the popup is informational, not blocking.
+- **Follow-for-follow works in #BuildInPublic community** — followed ~15 accounts in #BuildInPublic AI space. Many are small builders who follow back.
+- **Reply to high-engagement tweets**: Found @robert_shaw "Pitch Your Product" thread (308 replies, 12.3K views). Reply got posted successfully. Target tweets with 100+ replies for max visibility.
+- **People search > hashtag search for finding accounts**: Search "#BuildInPublic AI" in People tab yields better targets than Latest tab.
 - **Use 1-2 hashtags per tweet** (algorithm favors this over more). Primary: #BuildInPublic #100DaysOfAI #AIAgents. Rotate: #IndieHackers #OpenSource #100DaysOfCode.
 - **Lead with the "$20" hook** — it's a pattern interrupt. Everyone talks about millions; $20 is memorable.
 - **Tweet rate limit: 1 per hour max** — batch tweets carefully. Check last tweet time in memory/content.md.
