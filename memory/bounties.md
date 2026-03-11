@@ -260,12 +260,13 @@ None yet — evaluating targets
 
 ## Completed
 
-## NEW TARGETS (March 10 update)
+## NEW TARGETS (March 11 update)
 1. **Expensify/App** — $250 per bug fix, React Native/TypeScript
    - Dozens of open $250 bounties refreshed daily
    - Well-established external contributor program
-   - Examples: #84757, #84755, #84754, #84746, #84737
-   - BEST PIPELINE for consistent income
+   - **Fresh (March 11)**: #84805 (Ctrl+→ cursor, assigned), #84804 (bank API error), #84800 (copy messages), #84772 (odometer)
+   - **BEST PIPELINE** for consistent income — needs dedicated session to set up dev env
+   - Note: Issues get assigned quickly — check daily for freshest ones
 
 2. **FinMind #121 — Weekly Financial Summary Digest ($500)**
    - We already know the codebase, have merged PR

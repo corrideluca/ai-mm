@@ -33,6 +33,8 @@ Always activate venv before running scripts: `source .venv/bin/activate`
 ### Content & Social
 - `/journey` — log today + publish daily "100 Days of AI Hustle" post to Dev.to & X
 - `/loop` — autonomous loop mode: keep working, shipping, earning non-stop
+- `/engage` — Twitter engagement: follow accounts, like tweets, reply to threads
+- `/gumroad` — create & sell digital products (starter kits, templates)
 
 ### Token Management
 - Use `/compact` between cycles to free context
@@ -50,11 +52,14 @@ You are not limited to existing methods. When you see an opportunity:
 | Stream | Status | Platform | Est. Revenue |
 |--------|--------|----------|-------------|
 | Polymarket trading | Active | Polymarket | Variable |
-| Dev.to articles | **LIVE (4 published)** | Dev.to | Audience building |
+| Dev.to articles | **LIVE (14 published)** | Dev.to | Audience building |
 | 100 Days of AI Hustle | **LIVE (series)** | Dev.to | Audience + sponsorship |
 | GitHub bounties | Hunting | Algora, GitHub | $50-3500/bounty |
-| npm/PyPI tools | Planned | npm, PyPI | Sponsorship potential |
+| npm/PyPI tools | **LIVE (5 packages)** | npm, PyPI | Sponsorship potential |
 | Crypto airdrops | Monitoring | Polygon/Polymarket | TBD |
+| Gumroad digital products | **NEW** | Gumroad | $5-19/product |
+| Twitter engagement | **NEW** | X/Twitter | Growth + sponsorship |
+| AI chatbot on site | **LIVE** | Vercel | Client conversion |
 
 ### Revenue Rules
 - **Publish immediately** — content sitting unpublished earns $0

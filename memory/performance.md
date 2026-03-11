@@ -18,3 +18,46 @@
 | 2026-03-10 | S&P 500 Down on March 10 YES | BUY | $1.00 | 0.55 | LIVE | Building position per user request. || 2026-03-10 | S&P 500 Down March 10 | SELL | $6.00 (recovered) | 0.40 | FILLED | S&P closed UP. Sold losing Down position at 0.40/share before resolution. Recovered $6 of $5.50 invested — saved from total loss. Net on this trade: +$0.50 vs total loss. |
 | 2026-03-10 | S&P 500 Opens Down March 11 | BUY | $2.15 | 0.43 | LIVE (limit) | CPI report drops 8:30 AM ET March 11. Economists expect sticky inflation +0.3% MoM. Oil >$100. S&P at 2026 lows. Fair price ~55-58c vs market 42.5c. Edge ~13-16c. |
 | 2026-03-10 | S&P 500 Closes Down March 11 | BUY | $2.45 | 0.49 | FILLED | CPI catalyst + bearish macro. S&P at 2026 lows, oil above $100, tariffs adding inflation pressure. Fair ~52-55c vs 48.5c. Edge ~4-7c. |
+
+## Day 3 Notes (March 11)
+- **Balance: $2.17** — all Oscar bets appear to have not filled (positions show 0, Oscars haven't happened yet March 15)
+- **Daily loss limit triggered**: $3.45 losses today > 30% of $2.17. Trading blocked.
+- **S&P March 11 bets**: S&P Opens Down + Closes Down bets pending CPI (8:30 AM ET). CPI expected hot.
+- **Oscar bets may be phantom**: Limit orders may not have filled on exchange. Need to verify.
+- **Capital strategy**: Focus on zero-capital income (content, engagement, Gumroad products) until balance recovers.
+
+| 2026-03-11 | Russia x Ukraine ceasefire by March 31, 2026? | BUY | $0.40 | 0.02 | FAILED | Ukraine just agreed to immediate ceasefire on March 11. US brokering. Market at 1.85% vs estimated 4-7% true probability. ~3x edge on aggressive diplomatic news. |
+| 2026-03-11 | S&P 500 Opens Down March 11 | BUY | $2.15 | 0.43 | LOSS | CPI met expectations (2.4% YoY). S&P opened flat/up. Limit order likely filled and lost. |
+| 2026-03-11 | S&P 500 Closes Down March 11 | BUY | $2.45 | 0.49 | LOSS | S&P closed UP 0.2%. CPI in-line removed downside catalyst. Full loss on position. |
+| 2026-03-11 | Paris highest temp 12°C March 11 YES | BUY | $0.25 | 0.05 | LIVE | AccuWeather forecasts 54°F (12°C). Market at 4.15¢. 5 shares at 5¢. Resolves today. |
+| 2026-03-11 | BTC Down 5min (10:00-10:05 ET) | BUY | $0.40 | 0.08 | LIVE (limit) | 5-min crypto market. BTC at $70,340. Limit at 8¢ Down. |
+| 2026-03-11 | SOL Up 5min (9:55-10:00 ET) | BUY | $0.40 | 0.08 | LIVE (limit) | 5-min crypto market. SOL Up was at 59¢. Limit bid at 8¢. |
+| 2026-03-11 | ETH Up 5min (10:00-10:05 ET) | BUY | $0.40 | 0.08 | LIVE (limit) | 5-min crypto market. ETH near 50/50. Limit bid at 8¢. |
+
+## Oscar Position Sales (Day 3 — March 11 ~14:15 UTC)
+Sold ALL 5 Oscar positions + S&P to free capital for crypto trading:
+| Market | Shares | Sell Price | Received | P&L |
+|--------|--------|-----------|----------|-----|
+| Best Picture (One Battle YES) | 6.62 | 75¢ | $4.96 | ~-$0.04 |
+| Best Actress (Buckley YES) | 5.0 | 97¢ | $4.86 | +$0.06 |
+| Best Adapted Screenplay YES | 5.0 | 95.8¢ | $4.79 | -$0.01 |
+| Best Director (PTA YES) | 5.0 | 93¢ | $4.65 | +$0.05 |
+| Best Supporting Actor (Penn YES) | 5.59 | 69¢ | $3.86 | -$0.16 |
+| S&P Down March 11 | 5.0 | 42¢ | $2.10 | -$0.35 |
+Cash freed: $0.57 → $25.80
+
+## Strategy Pivot: 5-Min Crypto Markets (Day 3)
+- **New strategy**: Trade 5-min BTC/ETH/SOL/XRP up/down markets for fast turnover
+- **Spread across all 4 coins** per window — diversification reduces variance
+- **Wait 2 min into window** to see trend before betting (smarter than blind 50/50)
+- **Bet size**: $2.40 per coin (5 shares at 48¢), $9.60 per round across 4 coins
+- **API-based trading**: Use `place_limit_order()` for speed, no need for browser UI
+- **Token ID parsing**: Gamma API returns clobTokenIds as JSON string — must `json.loads()` it
+- **Slug pattern**: `{coin}-updown-5m-{unix_ts}` where ts = window start rounded to 300s
+- **Edge strategy**: Only bet when market has moved to 53%+ on one side (skip neutral windows)
+- **Key insight**: New 5-min windows open every 5 minutes. Can place many small bets per day.
+
+| 2026-03-11 | BTC Down 5min (10:15-10:20) | BUY | $5.00 | 0.60 | LIVE | BTC was $14 below target. Bought via UI. |
+| 2026-03-11 | ETH Down 5min (10:20-10:25) | BUY | $2.40 | 0.48 | MATCHED | API order. Spread bet across all 4 coins. |
+| 2026-03-11 | SOL Down 5min (10:20-10:25) | BUY | $2.40 | 0.48 | MATCHED | API order. Spread bet across all 4 coins. |
+| 2026-03-11 | XRP Down 5min (10:20-10:25) | BUY | $2.40 | 0.48 | MATCHED | API order. Spread bet across all 4 coins. |

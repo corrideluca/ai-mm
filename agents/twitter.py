@@ -104,6 +104,192 @@ def post_journey_update(day: int, headline: str, balance: str, highlight: str, d
     return post_thread(tweets)
 
 
+def get_me() -> dict:
+    """Get authenticated user info."""
+    client = get_client()
+    if not client:
+        return {"error": "X/Twitter API keys not configured in .env"}
+    try:
+        me = client.get_me(user_fields=["public_metrics", "description"])
+        return {
+            "id": me.data.id,
+            "username": me.data.username,
+            "name": me.data.name,
+            "followers": me.data.public_metrics.get("followers_count", 0),
+            "following": me.data.public_metrics.get("following_count", 0),
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def follow_user(username: str) -> dict:
+    """Follow a user by username."""
+    client = get_client()
+    if not client:
+        return {"error": "X/Twitter API keys not configured in .env"}
+    try:
+        # Look up user ID
+        user = client.get_user(username=username)
+        if not user.data:
+            return {"error": f"User @{username} not found"}
+        target_id = user.data.id
+        me = client.get_me()
+        my_id = me.data.id
+        response = client.follow_user(target_user_id=target_id)
+        return {"followed": username, "success": True}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def follow_users(usernames: list[str]) -> list[dict]:
+    """Follow a list of users. Returns results for each."""
+    results = []
+    for u in usernames:
+        results.append(follow_user(u))
+    return results
+
+
+def like_tweet(tweet_id: str) -> dict:
+    """Like a tweet by ID."""
+    client = get_client()
+    if not client:
+        return {"error": "X/Twitter API keys not configured in .env"}
+    try:
+        client.like(tweet_id=tweet_id)
+        return {"liked": tweet_id, "success": True}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def reply_to_tweet(tweet_id: str, text: str) -> dict:
+    """Reply to a tweet."""
+    client = get_client()
+    if not client:
+        return {"error": "X/Twitter API keys not configured in .env"}
+    if len(text) > 280:
+        return {"error": f"Reply too long: {len(text)}/280 chars"}
+    try:
+        response = client.create_tweet(text=text, in_reply_to_tweet_id=tweet_id)
+        rid = response.data["id"]
+        return {"id": rid, "url": f"https://x.com/i/status/{rid}", "text": text}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def search_users(query: str, max_results: int = 10) -> list[dict]:
+    """Search for users by keyword (e.g. '#BuildInPublic AI agent')."""
+    client = get_client()
+    if not client:
+        return [{"error": "X/Twitter API keys not configured in .env"}]
+    try:
+        # Search recent tweets matching query, extract unique authors
+        tweets = client.search_recent_tweets(
+            query=query,
+            max_results=min(max_results * 2, 100),
+            tweet_fields=["author_id"],
+            user_fields=["username", "public_metrics", "description"],
+            expansions=["author_id"],
+        )
+        if not tweets.includes or "users" not in tweets.includes:
+            return []
+        seen = set()
+        users = []
+        for user in tweets.includes["users"]:
+            if user.username not in seen:
+                seen.add(user.username)
+                users.append({
+                    "id": user.id,
+                    "username": user.username,
+                    "name": user.name,
+                    "followers": user.public_metrics.get("followers_count", 0) if user.public_metrics else 0,
+                    "description": user.description or "",
+                })
+            if len(users) >= max_results:
+                break
+        return users
+    except Exception as e:
+        return [{"error": str(e)}]
+
+
+def search_tweets(query: str, max_results: int = 10) -> list[dict]:
+    """Search recent tweets to find engagement opportunities."""
+    client = get_client()
+    if not client:
+        return [{"error": "X/Twitter API keys not configured in .env"}]
+    try:
+        tweets = client.search_recent_tweets(
+            query=query,
+            max_results=min(max_results, 100),
+            tweet_fields=["public_metrics", "created_at", "author_id"],
+            user_fields=["username"],
+            expansions=["author_id"],
+        )
+        if not tweets.data:
+            return []
+        # Map author IDs to usernames
+        author_map = {}
+        if tweets.includes and "users" in tweets.includes:
+            for u in tweets.includes["users"]:
+                author_map[u.id] = u.username
+        results = []
+        for t in tweets.data:
+            metrics = t.public_metrics or {}
+            results.append({
+                "id": t.id,
+                "text": t.text[:200],
+                "author": author_map.get(t.author_id, "unknown"),
+                "likes": metrics.get("like_count", 0),
+                "replies": metrics.get("reply_count", 0),
+                "retweets": metrics.get("retweet_count", 0),
+            })
+        return results
+    except Exception as e:
+        return [{"error": str(e)}]
+
+
+def engage_community(query: str = "#BuildInPublic AI", follow_count: int = 5, like_count: int = 3) -> dict:
+    """
+    Full engagement cycle: search for relevant users and tweets,
+    follow accounts, like tweets, return summary.
+    """
+    results = {"followed": [], "liked": [], "errors": []}
+
+    # 1. Find and follow relevant users
+    users = search_users(query, max_results=follow_count * 2)
+    followed = 0
+    for user in users:
+        if "error" in user:
+            results["errors"].append(user["error"])
+            continue
+        if followed >= follow_count:
+            break
+        res = follow_user(user["username"])
+        if res.get("success"):
+            results["followed"].append(user["username"])
+            followed += 1
+        elif "error" in res:
+            results["errors"].append(f"@{user['username']}: {res['error']}")
+
+    # 2. Find and like relevant tweets
+    tweets = search_tweets(query, max_results=like_count * 2)
+    liked = 0
+    for tweet in tweets:
+        if "error" in tweet:
+            results["errors"].append(tweet["error"])
+            continue
+        if liked >= like_count:
+            break
+        res = like_tweet(str(tweet["id"]))
+        if res.get("success"):
+            results["liked"].append({"id": tweet["id"], "author": tweet["author"]})
+            liked += 1
+        elif "error" in res:
+            results["errors"].append(f"Like {tweet['id']}: {res['error']}")
+
+    results["summary"] = f"Followed {len(results['followed'])}, liked {len(results['liked'])} tweets"
+    return results
+
+
 if __name__ == "__main__":
     from dotenv import load_dotenv
     load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))

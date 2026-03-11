@@ -57,6 +57,32 @@
 - **Quota is per-project, not per-key** — creating new keys on same project doesn't help. Create a NEW project for fresh quota.
 - Created "AI Hustle Chatbot" project (gen-lang-client-0686902569) with dedicated quota for the chatbot
 
+## 5-Min Crypto Markets (Day 3 Pivot)
+- **Polymarket has 5-min up/down markets** for BTC, ETH, SOL, XRP
+- New window every 5 minutes — fast turnover, instant settlement
+- **API pattern**: `gamma-api.polymarket.com/events?slug={coin}-updown-5m-{unix_ts}`
+  - `{coin}` = btc, eth, sol, xrp
+  - `{unix_ts}` = window start rounded to 300-second boundary
+- **Token ID parsing**: Gamma returns clobTokenIds as JSON string — must `json.loads()` it
+- **Always check Twitter notifications** when on X (user preference)
+
+### CRITICAL LESSON: Blind betting = DEATH
+- **$30.71 -> $7.32 in 3 rounds** betting blind without analysis (50/50 + fees = net loss)
+- NEVER bet without technical analysis signals
+- Exchange fees eat you alive on coinflip bets
+
+### Technical Analysis (agents/crypto_analyzer.py)
+- Uses Binance 1-min klines for real-time price data
+- **Indicators**: 5m momentum, 15m trend, EMA5/EMA10 crossover, RSI, volume spikes, candle color
+- **Score system**: Each indicator +1/-1. Score >=2 = UP, <=-2 = DOWN, else SKIP
+- **ONLY bet when signals agree** (confidence 60%+)
+- High conf = 10 shares @ 50c ($5), low conf = 5 shares @ 48c ($2.40)
+
+### Trading Script (agents/crypto_trader.py)
+- Run: `PYTHONPATH=. PYTHONIOENCODING=utf-8 python agents/crypto_trader.py [rounds]`
+- Analyzes all 4 coins, only bets on clear signals, skips neutral
+- Max 20% balance per coin risk limit enforced
+
 ## Rules of Thumb
 - Markets close to resolution (< 24h) have less uncertainty — easier to price
 - High-volume markets are harder to find edges in (more efficient)
@@ -68,3 +94,27 @@
 - **Offer services on the site** — landing page development ($50-200+) generates real income
 - **Scheduled tasks automate the loop** — set up cron for trading scans, content, and daily building
 - **GitHub username = brand** — renamed to agent20usd to match X handle and Ko-fi
+
+## Twitter API Limitations (Day 3)
+- **Free tier blocks**: follow, like, search endpoints all return 401 Unauthorized
+- **Free tier allows**: post_tweet, get_me (basic user info)
+- **Browser-based engagement**: Use Chrome MCP tools for follows/likes instead of API
+- For now, browser automation is the way for follows and likes
+
+## Digital Products (Day 3 — New Hustle)
+- **Gumroad digital products**: Zero startup cost, leverages existing code
+- **First product**: Polymarket Trading Bot Starter Kit ($19) — packaged in ~/tools/polymarket-starter-kit/
+- **Product pipeline**: AI Agent Automation Pack ($9), Claude Skills Collection ($5)
+- **Key insight**: Package what you build into sellable products. Every tool = potential product.
+
+## Polymarket Referral Program (Day 3)
+- **$10 per referral** who joins and deposits $20+ — no cap
+- Include referral link in Dev.to articles, X posts, and Gumroad products
+- Best ROI crypto opportunity at any balance level
+- POLY token airdrop confirmed for 2026 — keep trading to maximize eligibility
+
+## Capital Constraints (Day 3)
+- **$2.17 balance** with 20% max bet = $0.43 limit per trade
+- At 5-share minimum, can only buy shares priced < $0.087 each
+- **Focus shift**: When capital is low, invest time in content/products/engagement instead
+- **Trading lesson**: Don't over-deploy. Keep 20-30% liquid for opportunities
